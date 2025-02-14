@@ -1,16 +1,16 @@
 # Usando a imagem oficial do Python
-FROM python:3.10-slim
+FROM python:3.13-slim as python-base
 
 # Definir o diretório de trabalho
 WORKDIR /app
 
-# Copiar os arquivos de dependências para o contêiner
+# Copiar os arquivos de dependências primeiro para otimizar o cache
 COPY pyproject.toml poetry.lock /app/
 
-# Instalar dependências
-RUN pip install poetry && poetry install --no-dev
+# Instalar o Poetry e as dependências sem o modo de desenvolvimento
+RUN pip install --no-cache-dir poetry && poetry install --no-dev
 
-# Copiar o código da aplicação
+# Copiar o restante do código da aplicação
 COPY . /app/
 
 # Expor a porta do Django
