@@ -2,9 +2,9 @@ services:
   db:
     image: postgres:13.0-alpine
     environment:
-      POSTGRES_USER: user
-      POSTGRES_PASSWORD: password
-      POSTGRES_DB: lacrei_db
+      POSTGRES_USER: diego
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: saude_repo
     volumes:
       - postgres_data:/var/lib/postgresql/data
   web:
