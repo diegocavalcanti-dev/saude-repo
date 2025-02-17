@@ -16,8 +16,8 @@ Este projeto é uma API Restful desenvolvida em **Django** e **Django REST Frame
 
 ### 1. **Clone o repositório**
 ```bash
-git clone https://github.com/seu-usuario/seu-repositorio.git
-cd seu-repositorio
+git clone https://github.com/diegocavalcanti-dev/saude-repo
+cd saude-repo
 ```
 ### 2. Instale o Poetry (caso não tenha instalado)
 ```bash
