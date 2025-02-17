@@ -92,7 +92,7 @@ docker exec -it api_container python manage.py migrate
 
 Rodar os testes unitários com:
 ```bash
-python manage.py test
+poetry python manage.py test
 ```
 
 ## 📝 Tecnologias Utilizadas
